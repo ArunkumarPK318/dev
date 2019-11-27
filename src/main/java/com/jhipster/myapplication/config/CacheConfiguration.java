@@ -42,6 +42,20 @@ public class CacheConfiguration {
             createCache(cm, com.jhipster.myapplication.domain.User.class.getName());
             createCache(cm, com.jhipster.myapplication.domain.Authority.class.getName());
             createCache(cm, com.jhipster.myapplication.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.jhipster.myapplication.domain.Region.class.getName());
+            createCache(cm, com.jhipster.myapplication.domain.Country.class.getName());
+            createCache(cm, com.jhipster.myapplication.domain.Location.class.getName());
+            createCache(cm, com.jhipster.myapplication.domain.Car.class.getName());
+            createCache(cm, com.jhipster.myapplication.domain.Department.class.getName());
+            createCache(cm, com.jhipster.myapplication.domain.Department.class.getName() + ".employees");
+            createCache(cm, com.jhipster.myapplication.domain.Task.class.getName());
+            createCache(cm, com.jhipster.myapplication.domain.Task.class.getName() + ".jobs");
+            createCache(cm, com.jhipster.myapplication.domain.Employee.class.getName());
+            createCache(cm, com.jhipster.myapplication.domain.Employee.class.getName() + ".cars");
+            createCache(cm, com.jhipster.myapplication.domain.Employee.class.getName() + ".jobs");
+            createCache(cm, com.jhipster.myapplication.domain.Job.class.getName());
+            createCache(cm, com.jhipster.myapplication.domain.Job.class.getName() + ".tasks");
+            createCache(cm, com.jhipster.myapplication.domain.JobHistory.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

@@ -1,0 +1,48 @@
+{
+    "name": "Car",
+    "fields": [
+        {
+            "fieldName": "carName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "carModal",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "brandName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "enginType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "engineNo",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "manufactureDate",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "employee",
+            "otherEntityRelationshipName": "car",
+            "relationshipName": "employee",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191127123310",
+    "entityTableName": "car",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

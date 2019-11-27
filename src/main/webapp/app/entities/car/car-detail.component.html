@@ -1,0 +1,53 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="car">
+            <h2><span>Car</span> {{car.id}}</h2>
+            <hr>
+            <jhi-alert-error></jhi-alert-error>
+            <dl class="row-md jh-entity-details">
+                <dt><span>Car Name</span></dt>
+                <dd>
+                    <span>{{car.carName}}</span>
+                </dd>
+                <dt><span>Car Modal</span></dt>
+                <dd>
+                    <span>{{car.carModal}}</span>
+                </dd>
+                <dt><span>Brand Name</span></dt>
+                <dd>
+                    <span>{{car.brandName}}</span>
+                </dd>
+                <dt><span>Engin Type</span></dt>
+                <dd>
+                    <span>{{car.enginType}}</span>
+                </dd>
+                <dt><span>Engine No</span></dt>
+                <dd>
+                    <span>{{car.engineNo}}</span>
+                </dd>
+                <dt><span>Manufacture Date</span></dt>
+                <dd>
+                    <span>{{car.manufactureDate}}</span>
+                </dd>
+                <dt><span>Employee</span></dt>
+                <dd>
+                    <div *ngIf="car.employee">
+                        <a [routerLink]="['/employee', car.employee?.id, 'view']">{{car.employee?.id}}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon [icon]="'arrow-left'"></fa-icon>&nbsp;<span> Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/car', car.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon [icon]="'pencil-alt'"></fa-icon>&nbsp;<span> Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
